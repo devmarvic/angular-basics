@@ -1,0 +1,45 @@
+<h2 class="name-title">{{ name }}</h2>
+
+<div class="hero-content">
+  <div class="hero-group">
+    <p class="title-bold">Nombre:</p>
+    <p>{{ name }}</p>
+  </div>
+
+  <div class="hero-group">
+    <p class="title-bold">Edad:</p>
+    <p>{{ age }}</p>
+  </div>
+
+  <div class="hero-group">
+    <p class="title-bold">Method = function in class</p>
+    <p>{{getHeroDescription()}}</p>
+  </div>
+
+  <div class="hero-group">
+    <p class="title-bold">Capitalizado:</p>
+    <p>{{ capitalizedName }}</p>
+  </div>
+
+  <div class="btn-group">
+    <button
+      *ngIf="name !== 'Joker'"
+      (click)="changeHero()"
+      type="button"
+      class="btn-dark"
+    >Cambiar Nombre</button>
+
+    <button
+      *ngIf="age !== 36"
+      (click)="changeAge()"
+      type="button"
+      class="btn-dark"
+    >Cambiar Edad</button>
+
+    <button
+      (click)="resetData()"
+      type="button"
+      class="btn-dark"
+    >Reset</button>
+  </div>
+</div>

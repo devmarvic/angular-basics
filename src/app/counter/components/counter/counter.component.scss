@@ -1,0 +1,50 @@
+.flex-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  .counter-content {
+    font-size: 1.125rem;
+
+    .counter-quantity {
+      color: #1d4ed8;
+    }
+  }
+
+  .flex-container-buttons {
+    display: flex;
+    gap: 0.5rem;
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      border: none;
+      background-color: #1e293b;
+      color: #fff;
+      padding: 0.3rem 1rem;
+      width: 110px;
+      border-radius: 5px;
+      transition: background-color 300ms;
+
+      &:hover {
+        background-color: #000;
+        cursor: pointer;
+      }
+
+      &.more {
+        color: #7dd3fc;
+      }
+
+      &.less {
+        color: #fca5a5;
+      }
+
+      &.reset {
+        color: #e4e4e7;
+      }
+    }
+  }
+}

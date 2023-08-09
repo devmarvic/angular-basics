@@ -1,0 +1,8 @@
+<div class="flex-counter">
+  <p class="counter-content">Counter: <span class="counter-quantity">{{ counter }}</span></p>
+  <div class="flex-container-buttons">
+    <button (click)="increaseBy(+1)" type="button" class="btn more">+1</button>
+    <button (click)="resetCounter()" type="button" class="btn reset">Reset</button>
+    <button (click)="decrementBy(1)" type="button" class="btn less">-1</button>
+  </div>
+</div>

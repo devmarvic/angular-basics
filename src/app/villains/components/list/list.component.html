@@ -1,0 +1,34 @@
+<h3 class="name-list">Lista de Heroes</h3>
+
+<div class="list-content">
+
+  <div class="list-group">
+    <p class="title-bold">LIST:</p>
+    <p
+    *ngFor="let villain of villainsNames"
+    class="villain-name"
+    >- {{ villain }}</p>
+  </div>
+
+  <div class="btn-group">
+
+    <!-- si esto no se cumple, va a mostrar la referencia local -->
+    <div *ngIf="deletedVillain; else nothingWasDeleted">
+      <p>El Villano borrado: <span class="deleted-hero">{{ deletedVillain }}</span></p>
+    </div>
+
+    <!--* div que no existe, tipo <></> fragment -->
+    <!-- #nothingWasDeleted se conoce en Angular como una referencia local -->
+    <ng-template #nothingWasDeleted>
+      <p class="message">No se ha borrado nada!</p>
+    </ng-template>
+
+    <button
+      *ngIf="villainsNames.length > 0"
+      (click)="removeLastVillain()"
+      type="button"
+      class="btn-dark"
+    >Borrar Ultimo Villain</button>
+  </div>
+
+</div>
