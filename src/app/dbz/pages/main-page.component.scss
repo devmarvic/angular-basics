@@ -1,0 +1,15 @@
+.dbz-content-grid {
+  display: grid;
+  // background-color: pink;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,23 @@
+<h1>Dragon Ball Z - Personajes</h1>
+
+<!--* (evento : escuchar un evento ) -->
+<!--* [atributo] -->
+
+<div class="dbz-content-grid">
+  <div class="componente-lista">
+    <!-- component list -->
+    <!--? mandar del padre al hijo [] : llaves cuadradas -->
+    <dbz-list
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+    ></dbz-list>
+  </div>
+
+  <!--? escuchar eventos de hijo al padre () : parentesis -->
+  <div class="componente-form">
+    <!-- component form -->
+    <dbz-add-character
+      (onNewCharacter)="onNewCharacter($event)"
+    ></dbz-add-character>
+  </div>
+</div>

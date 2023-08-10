@@ -1,0 +1,38 @@
+
+<h4 class="dbz-title">Listado de Personajes</h4>
+
+<!-- ngClass : añadir clases de css de manera condicional -->
+
+<div class="character-group">
+  <div
+    class="character-list-item"
+    *ngFor="
+      let character of characterList;
+      let idx = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+    [ngClass]="{ 'character-last': isLast }"
+  >
+  <div>
+    <span class="character-idx">{{ idx + 1 }}.</span>{{ " " }}
+    <span class="character-name">{{ character.name }}</span
+    >{{ " " }}
+    <span class="label-power">power: </span>
+    <span class="character-power">{{ character.power }}</span>
+    <!-- <span class="character-isEven">Par? {{ isEven }}</span> -->
+  </div>
+
+  <div>
+    <button
+      (click)="onDeleteCharacter( character.id )"
+      type="button"
+      class="delete-button-list-item"
+    >
+      <span class="material-icons">close</span>
+    </button>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<h4 class="dbz-title">Agregar Personajes</h4>
+
+<!-- (ngSubmit) : evitar la propagracion del formulario, el refresco de la pagina -->
+<form action="" class="form-dbz" (ngSubmit)="emitCharacter()">
+  <div class="input-group">
+    <label for="nombre-personaje">Nombre:</label>
+
+    <!--? 2 way data binding / enlazar la informacion mediante [(ngModel)]  -->
+    <!-- [(ngModel)] : siempre va a necesitar el atributo name -->
+    <!-- [(ngModel)] : ya tengo acceso a la información del object como este en su ultima instancia -->
+    <!--* (evento) -->
+    <!--* [atributo] -->
+    <input
+      [(ngModel)]="character.name"
+      name="name"
+      class="input-dbz"
+      type="text"
+      id="nombre-personaje"
+      placeholder="Nombre"
+    />
+  </div>
+
+  <div class="input-group">
+    <label for="nombre-personaje">Poder:</label>
+
+    <!--? 2 way data binding / enlazar la informacion mediante [(ngModel)]  -->
+    <!-- [(ngModel)] : siempre va a necesitar el atributo name -->
+    <!-- [(ngModel)] : ya tengo acceso a la información del object como este en su ultima instancia -->
+    <!--* (evento) -->
+    <!--* [atributo] -->
+    <input
+      [(ngModel)]="character.power"
+      name="power"
+      class="input-dbz"
+      type="number"
+      id="poder-personaje"
+      placeholder="Poder"
+    />
+  </div>
+
+  <div class="input-group">
+    <button type="submit" class="btn-submit">Agregar</button>
+  </div>
+</form>
